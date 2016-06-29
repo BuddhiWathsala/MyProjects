@@ -1,0 +1,292 @@
+private class Calc implements ActionListener
+  {
+    public void actionPerformed(ActionEvent event)
+    {
+      JButton src = (JButton) event.getSource();
+      
+      //when click add button
+      if(src.equals(add))
+      {
+        if(stemp1 == null)
+        {
+          answerField.setText("choose your number first!!");
+        }else
+        {
+          if(stemp1 != null && stemp2 == null)
+          {
+            opChosen = true;
+            operation = '+';
+          }else
+          {
+            if(stemp1 != null && stemp2 != null)
+            {
+              double d1 = Double.parseDouble(stemp1);
+              double d2 = Double.parseDouble(stemp2);
+              
+              answer = d1+d2;
+              sanswer = Double.toString(answer);
+              stemp1 = sanswer;
+              stemp2 = null;
+              answerField.setText(sanswer);
+              
+            }
+          }
+        }
+      }
+      
+      //when click mult button
+      if(src.equals(mult))
+      {
+        if(stemp1 == null)
+        {
+          System.out.println("coose your number first!!");
+        }else
+        {
+          if(stemp1 != null && stemp2 == null)
+          {
+            opChosen = true;
+            operation = '*';
+          }else
+          {
+            if(stemp1 != null && stemp2 != null)
+            {
+              if(stemp1 != null && stemp2 != null)
+            {
+              double d1 = Double.parseDouble(stemp1);
+              double d2 = Double.parseDouble(stemp2);
+              
+              answer = d1*d2;
+              sanswer = Double.toString(answer);
+              stemp1 = sanswer;
+              stemp2 = null;
+              answerField.setText(sanswer);
+            }
+          }
+        }
+      }
+      
+      //when click sub button
+      if(src.equals(sub))
+      {
+        if(stemp1 == null)
+        {
+          System.out.println("coose your number first!!");
+        }else
+        {
+          if(stemp1 != null && stemp2 == null)
+          {
+            opChosen = true;
+            operation = '-';
+          }else
+          {
+            if(stemp1 != null && stemp2 != null)
+            {
+              if(stemp1 != null && stemp2 != null)
+            {
+              double d1 = Double.parseDouble(stemp1);
+              double d2 = Double.parseDouble(stemp2);
+              
+              answer = d1-d2;
+              sanswer = Double.toString(answer);
+              stemp1 = sanswer;
+              stemp2 = null;
+              answerField.setText(sanswer);
+            }
+          }
+        }
+      }
+      
+      //when click div button
+      if(src.equals(div))
+      {
+        if(stemp1 == null)
+        {
+          System.out.println("coose your number first!!");
+        }else
+        {
+          if(stemp1 != null && stemp2 == null)
+          {
+            opChosen = true;
+            operation = '/';
+          }else
+          {
+            if(stemp1 != null && stemp2 != null)
+            {
+              System.out.println("Two operations only");
+            }
+          }
+        }
+      }
+      
+      //when click sqrt button
+      if(src.equals(sqrt))
+      {
+        if(stemp1 == null)
+        {
+          answerField.setText("choose your number first!!");
+        }else
+        {
+          double d1 = Double.parseDouble(stemp1);
+          
+          if(d1<0)
+          {
+            answerField.setText("Can't find negative sqrt!!");
+          }else{
+          answer = Math.sqrt(d1);
+          sanswer = Double.toString(answer);
+          answerField.setText(sanswer);
+          }
+        }
+        
+      }
+      
+      
+      //when click sqr button
+      if(src.equals(sqr))
+      {
+        if(stemp1 == null)
+        {
+          answerField.setText("choose your number first!!");
+        }else
+        {
+          double d1 = Double.parseDouble(stemp1);
+          
+          stemp1 = Double.toString(answer);
+          answer = Math.pow(d1,2);
+          sanswer = Double.toString(answer);
+          answerField.setText(sanswer);
+          
+        }
+        
+      }
+      
+      //when click fib button
+      if(src.equals(fib))
+      {
+        if(stemp1 == null)
+        {
+          answerField.setText("choose your number first!!");
+        }else
+        {
+          int num = Integer.parseInt(stemp1);
+          
+          
+          int answer1 = My_Math.fibonacci(num);
+          stemp1 = Integer.toString(answer1);
+          sanswer = Integer.toString(answer1);
+          answerField.setText(sanswer);
+          
+        }
+        
+      }
+      
+      //when click fact button
+      if(src.equals(fact))
+      {
+        if(stemp1 == null)
+        {
+          answerField.setText("choose your number first!!");
+        }else
+        {
+          int num = Integer.parseInt(stemp1);
+          
+          
+          int answer1 = My_Math.factorial(num);
+          sanswer = Integer.toString(answer1);
+          stemp1 = Integer.toString(answer1);
+          answerField.setText(sanswer);
+          
+        }
+        
+      }
+      
+     //when click pow button
+      if(src.equals(power))
+      {
+        if(stemp1 == null)
+        {
+          answerField.setText("choose your number first!!");
+        }else
+        {
+          double num = Double.parseDouble(stemp1);
+          
+          
+          double answer1 = Math.pow(num,4);
+          sanswer = Double.toString(answer1);
+          
+          answerField.setText(sanswer);
+          
+        }
+        
+      }
+      
+     //when click Equal button
+      if(src.equals(equals))
+      {
+        if(stemp1 == null)
+        {
+          answerField.setText("choose your number first!!");
+        }else
+        {
+          if(stemp1 != null && stemp2 == null)
+          {
+            answerField.setText("choose your both number first!!");
+          }else
+          {
+            if(stemp1 != null && stemp2 != null)
+            {
+              double d1=0.0, d2 = 0.0;
+              
+              d1 = Double.parseDouble(stemp1);
+              d2 = Double.parseDouble(stemp2);
+              stemp1=null;
+              stemp2=null;
+              
+              switch(operation)
+              {
+                case('+'):
+                  answer = d1 + d2;
+                  
+                  break;
+                case('-'):
+                  answer = d1 - d2;
+                  break;
+                case('*'):
+                  answer = d1 - d2;
+                  break;
+                 case('/'):
+                   if(d2 == 0.0)
+                 {
+                   answer = 0;
+                   answerField.setText("cannot divide by zero");
+                   break;
+                 }else{
+                   answer = d1 / d2;
+                   break;
+                 }
+                default:
+                answerField.setText("unknown");
+                break;
+              }
+              stemp1 = Double.toString(answer);
+              sanswer = Double.toString(answer);
+              answerField.setText(sanswer);
+            }
+          }
+        }
+      }
+      
+      //when click clear button
+      if(src.equals(clear))
+      {
+        stemp1 = null;
+        stemp2 = null;
+        equalsClicked = false;
+        opChosen = false;
+        operation = ' ';
+        answerField.setText(null);
+        sanswer = null;
+      }
+    }
+  }
+}
