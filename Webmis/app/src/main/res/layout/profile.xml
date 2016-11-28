@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:text="Profile"
+        android:textSize="25dp"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginStart="24dp"
+        android:id="@+id/profile_header"
+        android:layout_marginTop="70dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="User Name :"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_user_name"
+        android:layout_below="@+id/profile_header"
+        android:layout_alignRight="@+id/profile_header"
+        android:layout_alignEnd="@+id/profile_header"
+        android:layout_marginTop="27dp" />
+
+    <TextView
+        android:text="Name :"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:id="@+id/tv_name"
+        android:layout_below="@+id/tv_user_name"
+        android:layout_alignLeft="@+id/tv_user_name"
+        android:layout_alignStart="@+id/tv_user_name" />
+
+    <TextView
+        android:text="Course :"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_name"
+        android:layout_alignLeft="@+id/tv_name"
+        android:layout_alignStart="@+id/tv_name"
+        android:layout_marginTop="16dp"
+        android:id="@+id/tv_course" />
+
+    <TextView
+        android:text="username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_user_name"
+        android:layout_toRightOf="@+id/tv_user_name"
+        android:layout_toEndOf="@+id/tv_user_name"
+        android:layout_marginLeft="49dp"
+        android:layout_marginStart="49dp"
+        android:id="@+id/tv_user_name_data" />
+
+    <TextView
+        android:text="name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_name_data"
+        android:layout_above="@+id/tv_course"
+        android:layout_alignLeft="@+id/tv_user_name_data"
+        android:layout_alignStart="@+id/tv_user_name_data" />
+
+    <TextView
+        android:text="course"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_course_data"
+        android:layout_alignBaseline="@+id/tv_course"
+        android:layout_alignBottom="@+id/tv_course"
+        android:layout_alignLeft="@+id/tv_name_data"
+        android:layout_alignStart="@+id/tv_name_data" />
+
+    <TextView
+        android:text="email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_email"
+        android:layout_alignLeft="@+id/tv_course_data"
+        android:layout_alignStart="@+id/tv_course_data"
+        android:id="@+id/tv_email_data" />
+
+    <TextView
+        android:text="gpa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tv_gpa"
+        android:layout_alignLeft="@+id/tv_email_data"
+        android:layout_alignStart="@+id/tv_email_data"
+        android:id="@+id/tv_gpa_data" />
+
+    <TextView
+        android:text="Email :"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:id="@+id/tv_email"
+        android:layout_below="@+id/tv_course"
+        android:layout_alignRight="@+id/tv_name"
+        android:layout_alignEnd="@+id/tv_name" />
+
+    <TextView
+        android:text="GPA :"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_gpa"
+        android:layout_marginTop="21dp"
+        android:layout_below="@+id/tv_email"
+        android:layout_alignLeft="@+id/tv_email"
+        android:layout_alignStart="@+id/tv_email" />
+
+    <Button
+        android:text="Vacancies"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="13dp"
+        android:id="@+id/btn_vacancies"
+        android:onClick="showVacancies" />
+
+    <Button
+        android:text="Logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/btn_vacancies"
+        android:layout_toRightOf="@+id/btn_vacancies"
+        android:layout_toEndOf="@+id/btn_vacancies"
+        android:layout_marginLeft="17dp"
+        android:layout_marginStart="17dp"
+        android:id="@+id/btn_logout" />
+
+</RelativeLayout>
